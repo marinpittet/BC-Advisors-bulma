@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'navbar';
+
+footer.navbar.is-brand.is-fixed-bottom {
+			background-color: $azul-logo;
+			color: $azul-logo--claro;
+			min-height: 30px;
+			max-height: 30px; 
+			text-align: center;
+
+			.fa-angle-up {
+				line-height: 30px;
+				font-size: 2rem;
+			}
+		}
+	
