@@ -215,14 +215,14 @@ nav .navbar .sidenav__items {
   height: 200px;
 }
 .info__contents .info__contents--second {
-  background-image: url(../images/banner--2.jpg);
+  background-image: url(../images/Felipe-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 200px;
 }
 .info__contents .info__contents--third {
-  background-image: url(../images/banner--3.jpg);
+  background-image: url(../images/Christopher-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -241,8 +241,7 @@ footer.navbar.is-brand.is-fixed-bottom .fa-angle-up {
   text-align: center;
   line-height: 30px;
   font-size: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: calc(50vw - 50%);
 }
 
 /*# sourceMappingURL=style.css.map */
