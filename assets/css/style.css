@@ -2,7 +2,7 @@
 /* Barra de navegación con despliegue lateral */
 nav {
   height: 80px;
-  width: 100vw;
+  width: 100%;
 }
 nav .topbar {
   grid-column: span 12;
@@ -176,18 +176,14 @@ nav .navbar .sidenav__items {
   }
 }
 
-/* Footer */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  footer.navbar.is-brand.is-fixed-bottom .fa-angle-up {
-    margin-left: calc(50vw - 50%);
-  }
+.columns {
+  margin: 0;
 }
-@media only screen and (min-width: 1024px) {
-  footer.navbar.is-brand.is-fixed-bottom .fa-angle-up {
-    margin-left: calc(50vw - 50%);
-  }
+.columns:last-child {
+  margin-bottom: 0;
 }
 
+/* Seccion 1*/
 .info .info__img {
   padding: 0;
 }
@@ -241,15 +237,43 @@ nav .navbar .sidenav__items {
   height: 200px;
 }
 
+/* /.Seccion 1 */
+/* Seccion 2 */
+.sec-prod {
+  margin-top: 10px;
+  border-top: solid 1px rgba(69, 134, 234, 0.7);
+  border-bottom: solid 1px rgba(69, 134, 234, 0.7);
+}
+.sec-prod .headings h1 {
+  padding-top: 2rem;
+}
+.sec-prod .headings ul {
+  margin-bottom: 50px;
+}
+.sec-prod .headings li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+.sec-prod .products {
+  background-color: #4387EA;
+  padding: 2rem;
+  color: #fff;
+}
+.sec-prod .products h1 {
+  color: #fff;
+}
+
+/* /.Seccion 2 */
 /* footer */
 footer.navbar.is-brand.is-fixed-bottom {
   background-color: #1B365E;
   color: #4387EA;
   min-height: 30px;
-  max-height: 30px;
-  text-align: center;
+  height: 30px;
 }
 footer.navbar.is-brand.is-fixed-bottom .fa-angle-up {
+  margin-left: calc(50vw - 1rem);
   text-align: center;
   line-height: 30px;
   font-size: 2rem;

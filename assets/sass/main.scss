@@ -1,6 +1,15 @@
 @import 'variables';
 @import 'navbar';
 
+.columns {
+	margin: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Seccion 1*/
 .info {
 	.info__img {
 		padding: 0;
@@ -63,8 +72,41 @@
         height: 200px;
     }
 }
+/* /.Seccion 1 */
 
+/* Seccion 2 */
+.sec-prod {
+	margin-top: 10px;
+	border-top: solid 1px $azul-logo--claro-alpha;
+	border-bottom: solid 1px $azul-logo--claro-alpha;
 
+	.headings {
+		h1 {
+			padding-top: 2rem;
+		}
+
+		ul{
+			margin-bottom: 50px;
+		}
+
+		li {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			padding-left: 1rem;
+		}
+	}
+
+	.products {
+		background-color: $azul-logo--claro;
+		padding: 2rem;
+		color: #fff;
+
+		h1 {
+			color: #fff;
+		}
+	}
+}
+/* /.Seccion 2 */
 
 /* footer */
 
@@ -72,10 +114,10 @@ footer.navbar.is-brand.is-fixed-bottom {
     background-color: $azul-logo;
     color: $azul-logo--claro;
     min-height: 30px;
-    max-height: 30px;
-    text-align: center;
+    height: 30px;
 
     .fa-angle-up {
+    	margin-left: calc(50vw - 1rem);
     	text-align: center;
         line-height: 30px;
         font-size: 2rem;

@@ -3,7 +3,7 @@
 /* Barra de navegación con despliegue lateral */
 nav {
 	height: 80px;
-	width: 100vw;
+	width: 100%;
 	
 	.topbar {
 	    grid-column: span 12;
@@ -225,30 +225,5 @@ nav {
                 }
             }
         }
-    }
-}
-
-/* Footer */
-footer.navbar.is-brand.is-fixed-bottom {
-
-
-    .fa-angle-up {
-    	@include mobile-layout {
-             
-        }
-
-        @include mobile-landscape {
-           
-        }
-
-        @include tablet-layout {
-          	margin-left: calc(50vw - 50%);
-        }
-
-
-    	@include desktop-layout {
-        	margin-left: calc(50vw - 50%);
-        }
-        
     }
 }
