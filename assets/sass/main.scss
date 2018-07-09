@@ -1,10 +1,6 @@
 @import 'variables';
 @import 'navbar';
 
-html, body {
-	overflow-x: hidden; 
-}
-
 .info {
 	.info__img {
 		padding: 0;
@@ -83,6 +79,5 @@ footer.navbar.is-brand.is-fixed-bottom {
     	text-align: center;
         line-height: 30px;
         font-size: 2rem;
-        margin-left: calc(50vw - 50%);
     }
 }
