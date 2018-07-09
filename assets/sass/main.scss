@@ -1,16 +1,85 @@
 @import 'variables';
 @import 'navbar';
 
-footer.navbar.is-brand.is-fixed-bottom {
-			background-color: $azul-logo;
-			color: $azul-logo--claro;
-			min-height: 30px;
-			max-height: 30px; 
-			text-align: center;
+.info {
+	.info__img {
+		padding: 0;
+	}
 
-			.fa-angle-up {
-				line-height: 30px;
-				font-size: 2rem;
-			}
+	.info__text {
+		padding-top: 1rem;
+		border-top: solid 4px $azul-logo--claro;	
+	}
+}
+
+.info__contents {
+	.column {
+		padding: 0;
+	}
+
+	.text--active {
+		padding: 1.2rem;
+		background-color: $azul-logo--claro-alpha;
+		height: 100%;
+
+		h1, h3, p {
+			color: #fff;
 		}
-	
+	}
+
+	.text--inactive {
+		padding: 1.2rem;
+		background-color: rgba(255, 255, 255, 0.7);
+		height: 100%;
+		border-left: solid 4px $azul-logo--claro; 
+
+		h3, p {
+			color: $azul-logo--claro;
+		}
+		h1 {
+			color: $azul-logo;
+		}
+	}
+
+    .info__contents--first {
+        background-image: url(../images/banner--4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 200px;
+    }
+    .info__contents--second {
+        background-image: url(../images/banner--2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 200px;
+    }
+    .info__contents--third {
+        background-image: url(../images/banner--3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 200px;
+    }
+}
+
+
+
+/* footer */
+
+footer.navbar.is-brand.is-fixed-bottom {
+    background-color: $azul-logo;
+    color: $azul-logo--claro;
+    min-height: 30px;
+    max-height: 30px;
+    text-align: center;
+
+    .fa-angle-up {
+    	text-align: center;
+        line-height: 30px;
+        font-size: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
