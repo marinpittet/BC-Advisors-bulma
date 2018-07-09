@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'navbar';
 
+body {
+	overflow-x: hide; 
+}
+
 .info {
 	.info__img {
 		padding: 0;
