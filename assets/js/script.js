@@ -1,3 +1,6 @@
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 80);
+});
 // Date topbar
 	$(window).on('load', function(){
 		var d = new Date();

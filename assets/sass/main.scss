@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'navbar';
 
+#quiensomos, #servicios, #clientes, #contacto {
+	top: -80px;
+}
+
 .columns {
 	margin: 0;
 
