@@ -1,54 +1,194 @@
-window.addEventListener("hashchange", function () {
+window.addEventListener("hashchange", function() {
     window.scrollTo(window.scrollX, window.scrollY - 80);
 });
 // Date topbar
-	$(window).on('load', function(){
-		var d = new Date();
-		d = d.toDateString();
+$(window).on('load', function() {
+    var d = new Date();
+    d = d.toDateString();
 
-		var h = new Date().getHours();
-		var m = new Date().getMinutes();
-		var s = new Date().getSeconds();
-		console.log(h, m, s);
-		$('#date').text(' ' + d);
-	});
-	// /Date topbar
+    var h = new Date().getHours();
+    var m = new Date().getMinutes();
+    var s = new Date().getSeconds();
+    // console.log(h, m, s);
+    $('#date').text(' ' + d);
+});
+// /Date topbar
 
-$(function(){
+$(function() {
 
-	// Toggleable Navbar
-	$('.navbar__toggle').click(function(){
+    // Toggleable Navbar
+    $('.navbar__toggle').click(function() {
 
-		$('.sidenav--close').addClass('sidenav--open');
-
-
-		var sidewidth = $('.sidenav--open').css('width');
+        $('.sidenav--close').addClass('sidenav--open');
 
 
-		if (sidewidth === '0px') {
-			$('.navbar__toggle .fa-bars').animate({
-				opacity: 0
-			},100);
-			$('.sidenav--open').css('width', '100%');
-			$('.navbar__toggle .fa-bars').css('display', 'none');
-			$('.navbar__toggle .fa-times').css('display', 'block');
-			$('.navbar__toggle .fa-times, .sidenav__items').animate({
-				opacity: .8
-			},100);
-		} else {
-			$('.navbar__toggle .fa-times').animate({
-				opacity: 0
-			},100);
-			$('.sidenav__items').css('opacity', '0');
-			$('.sidenav--open').css('width', '0px');
-			$('.navbar__toggle .fa-times').css('display', 'none');
-			$('.navbar__toggle .fa-bars').css('display', 'block');
-			$('.navbar__toggle .fa-bars').animate({
-				opacity: .8
-			},100);
-		}
+        var sidewidth = $('.sidenav--open').css('width');
 
-	})
-	// /Toggleable Navbar
+
+        if (sidewidth === '0px') {
+            $('.navbar__toggle .fa-bars').animate({
+                opacity: 0
+            }, 100);
+            $('.sidenav--open').css('width', '100%');
+            $('.navbar__toggle .fa-bars').css('display', 'none');
+            $('.navbar__toggle .fa-times').css('display', 'block');
+            $('.navbar__toggle .fa-times, .sidenav__items').animate({
+                opacity: .8
+            }, 100);
+        } else {
+            $('.navbar__toggle .fa-times').animate({
+                opacity: 0
+            }, 100);
+            $('.sidenav__items').css('opacity', '0');
+            $('.sidenav--open').css('width', '0px');
+            $('.navbar__toggle .fa-times').css('display', 'none');
+            $('.navbar__toggle .fa-bars').css('display', 'block');
+            $('.navbar__toggle .fa-bars').animate({
+                opacity: .8
+            }, 100);
+        }
+
+    })
+
+    $('.sidenav__items').click(function() {
+        $('.navbar__toggle .fa-times').animate({
+            opacity: 0
+        }, 100);
+        $('.sidenav__items').css('opacity', '0');
+        $('.sidenav--open').css('width', '0px');
+        $('.navbar__toggle .fa-times').css('display', 'none');
+        $('.navbar__toggle .fa-bars').css('display', 'block');
+        $('.navbar__toggle .fa-bars').animate({
+            opacity: .8
+        }, 100);
+    })
+    // /Toggleable Navbar
+
+    // seccion quienes somos, cambio de imagen y texto on click
+
+    var image = $('#img-principal');
+    var titulo = $('#title-current');
+    var texto = $('#text-current');
+
+    $('#qs-01').click(function() {
+        image.fadeOut('slow', function() {
+            image.attr('src', 'assets/images/banner--4.jpg');
+            image.fadeIn('slow');
+        });
+        titulo.fadeOut('slow', function() {
+            titulo.text('Quiénes somos');
+            titulo.fadeIn('slow');
+        });
+        texto.fadeOut('slow', function() {
+            texto.text('Somos una consultora que cuenta con asociados expertos en finanzas y economía. Desarrollamos consultoría en evaluación de proyectos, valorización de activos financieros, valorización de empresas y estudios de impacto económico. Contamos con experiencia de años en el mercado chileno.');
+            texto.fadeIn('slow');
+        });
+    })
+    $('#qs-02').click(function() {
+        image.fadeOut('slow', function() {
+            image.attr('src', 'assets/images/Felipe-01.jpg');
+            image.fadeIn('slow');
+        });
+        titulo.fadeOut('slow', function() {
+            titulo.text('Luis Felipe Illanes');
+            titulo.fadeIn('slow');
+        });
+        texto.fadeOut('slow', function() {
+            texto.text('Ingeniero Comercial con mención economía y Magister en Finanzas de la Universidad de Chile. Ha ejercido labores en tesorería en Banco Estado Corredores de Bolsa y Banco Estado en mesa de derivados. Ha trabajado en la Clasificadora de Riesgo Humphreys, liderando los procesos de clasificación de riesgo de empresas financieras y aseguradoras (evaluación de riesgo de instrumentos de deuda pública). Asimismo ha obtenido una amplia experiencia en valorización de fondos de inversión, estructuración de activos y evaluación de proyectos. Actualmente se desempeña como director ejecutivo de BC Advisors.');
+            texto.fadeIn('slow');
+        });
+    })
+
+    $('#qs-03').click(function() {
+        image.fadeOut('slow', function() {
+            image.attr('src', 'assets/images/Christopher-01.jpg');
+            image.fadeIn('slow');
+        });
+        titulo.fadeOut('slow', function() {
+            titulo.text('Christian Baillarie');
+            titulo.fadeIn('slow');
+        });
+        texto.fadeOut('slow', function() {
+            texto.text('Titulado en ingeniería comercial, con mención en economía y diplomado en Valorización de empresas de la Universidad Adolfo Ibáñez. Ha ejercido labores en el área de estudios de la corredora de bolsa del banco BCI y como portafolio manager en Corpbanca AGF. Ha trabajado a cargo del área de finanzas de las categorías de bebestibles de Unilever Chile. Ha realizado consultorías en materia de finanzas y evaluación de proyectos e inversiones, tanto en el ámbito de instituciones privadas como públicas. Actualmente se desempeña como director de 3 compañías privadas, dentro de las cuales se encuentra C&A.');
+            texto.fadeIn('slow');
+        });
+    })
+
+    // seccion nuestros servicios, cambio de texto on click
+var titulopro = $('#prod-title');
+var textopro = $('#prod-text');
+
+$('#prod1 a').click(function() {
+	$('.menu-list .is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	titulopro.fadeOut('slow', function() {
+            titulopro.text('Valorización de empresas');
+            titulopro.fadeIn('slow');
+        });
+	textopro.fadeOut('slow', function() {
+            textopro.text('Valorizamos empresas utilizando los métodos más actualizados de la industria teniendo así una opinión experta acerca del valor de mercado de su negocio. Servicio muy útil para conocer el valor de su negocio y con ello poder vender participaciones al precio de mercado.');
+            textopro.fadeIn('slow');
+        });
+});
+$('#prod2 a').click(function() {
+	$('.menu-list .is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	titulopro.fadeOut('slow', function() {
+            titulopro.text('Valorizacion de fondos de inversión');
+            titulopro.fadeIn('slow');
+        });
+	textopro.fadeOut('slow', function() {
+            textopro.text('Realizamos servicio de valorización de fondos de inversión, específicamente fondos de inversión inmobiliarios, capital privado y fondos de fondos.');
+            textopro.fadeIn('slow');
+        });
+});
+$('#prod3 a').click(function() {
+	$('.menu-list .is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	titulopro.fadeOut('slow', function() {
+            titulopro.text('Evaluación de proyectos');
+            titulopro.fadeIn('slow');
+        });
+	textopro.fadeOut('slow', function() {
+            textopro.text('Mejoramos el valor de su negocio prestando asesoría en la evaluación de nuevos proyectos en su empresa. Estudiamos las ventajas y desventajas cualitativas y cuantitativas de los nuevos proyectos, con lo cual entregamos un informe por la conveniencia o no de realizarlo.');
+            textopro.fadeIn('slow');
+        });
+});
+$('#prod4 a').click(function() {
+	$('.menu-list .is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	titulopro.fadeOut('slow', function() {
+            titulopro.text('Estudios de impacto económico');
+            titulopro.fadeIn('slow');
+        });
+	textopro.fadeOut('slow', function() {
+            textopro.text('Evaluamos el impacto económico de proyectos públicos y privados. Nuestros asociados han participado en diversos proyectos propuestos por el estado.');
+            textopro.fadeIn('slow');
+        });
+});
+$('#prod5 a').click(function() {
+	$('.menu-list .is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	titulopro.fadeOut('slow', function() {
+            titulopro.text('Asesoría en compra y venta de empresas ');
+            titulopro.fadeIn('slow');
+        });
+	textopro.fadeOut('slow', function() {
+            textopro.text('Por medio de nuestro equipo profesional, realizamos procesos de due-dilligence y prestamos asesorías en la compra y venta de empresas. Proceso muy similar al de la valorización de las empresas y evaluación de los futuros efectos de la fusión mediante proyección de flujos. Los flujos se sensibilizan utilización herramientas estadísticas en las cuales se les otorga distribuciones estadísticas al comportamiento de las variables más relevantes en la conformación del flujo de caja.');
+            textopro.fadeIn('slow');
+        });
+});
+$('#prod6 a').click(function() {
+	$('.menu-list .is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	titulopro.fadeOut('slow', function() {
+            titulopro.text('Asesoría en evaluación de rating crediticio ');
+            titulopro.fadeIn('slow');
+        });
+	textopro.fadeOut('slow', function() {
+            textopro.text('Prestamos asesorías en relación al mejoramiento de su rating crediticio para presentación frente a los bancos, inversionistas y calificadoras de riesgo. Realizamos un informe completo sobre los aspectos fundamentales de la compañía que se deben fortalecer para que esta tenga mejores condiciones crediticias (tasas de interés más bajas, estructuración a largo plazo de su deuda financiera o mejoramiento de monto de las líneas crédito).');
+            textopro.fadeIn('slow');
+        });
+});
 
 });

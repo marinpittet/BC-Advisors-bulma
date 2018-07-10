@@ -105,7 +105,7 @@
 	}
 
 	.products {
-		background-color: $azul-logo--claro;
+		background: linear-gradient($azul-logo--claro, $azul-logo--compuesto);
 		padding: 2rem;
 		color: #fff;
 
@@ -145,14 +145,19 @@
 
 		p.title, .subtitle{
 			text-align: center;
-			color: $azul-logo--oscuro;
+			color: #fff;
+		}
+
+		p {
+			color: rgba(255,255,255,.9);
 		}
 
 		.container-contact {
 			max-width: 500px;
 			padding: 2rem;
-			background-color: $azul-logo--claro-alpha;
+			background: linear-gradient($azul-logo--claro, $azul-logo--compuesto);
 			border-radius: 5px;
+			opacity: .9;
 
 			input {
 				width: 100%;
@@ -172,7 +177,7 @@
 			}
 
 			.button {
-				border: solid 2px $azul-logo--oscuro;
+				border: solid 2px rgba(255,255,255,.9);
 				background-color: $azul-logo--claro;
 				color: #fff;
 
@@ -184,8 +189,8 @@
 }
 /* Footer */
 footer {
-	background-color: $azul-logo--oscuro;
-	color: #fff;
+	background-color: #111;
+	color: rgba(255,255,255,.7);
 	padding: 0 1rem 0 1rem;
 	text-align: center;
 
