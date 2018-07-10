@@ -270,6 +270,7 @@ nav .navbar .sidenav__items {
 /* /.Seccion 2 */
 .sec-clients {
   background-color: #f1f1f1;
+  border-bottom: solid 1px rgba(69, 134, 234, 0.7);
 }
 .sec-clients .subtitle {
   text-align: center;
