@@ -94,20 +94,31 @@
 		}
 
 		li {
-			padding-top: 1rem;
-			padding-bottom: 1rem;
-			padding-left: 5px;
-
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+			
 			.fa-caret-right {
 				margin-left: 5px;
-				}
-			@include tablet-layout {
-          		padding-left: 15px;
+			}
+		}	
+
+		.menu-list a {		
+			@include mobile-layout {
+            	padding-left: .5em;
+ 
 	        }
 
+	        @include mobile-landscape {
+				padding-left: .5em;
+	           
+	        }
+			
+			@include tablet-layout {
+          		padding-left: 1em;
+	        }
 
 	    	@include desktop-layout {
-	        	padding-left: 15px;
+	        	padding-left: 1em;
 	        }	
 		}
 	}
