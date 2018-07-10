@@ -92,7 +92,11 @@
 		li {
 			padding-top: 1rem;
 			padding-bottom: 1rem;
-			padding-left: 1rem;
+			padding-left: 15px;
+
+			.fa-caret-right {
+				margin-left: 5px;
+				}
 		}
 	}
 
@@ -107,10 +111,95 @@
 	}
 }
 /* /.Seccion 2 */
+.sec-clients {
+	background-color: #f1f1f1;
 
-/* footer */
+	.subtitle {
+		text-align: center;
+		padding-bottom: 0;
 
-footer.navbar.is-brand.is-fixed-bottom {
+	}
+
+	.client {
+		line-height: 200px;
+		padding-top: 0;
+
+		img {
+			max-height: 100px;
+			vertical-align: middle;
+		}
+	}
+}
+/* Contact */
+.contact {
+	background-image: url(../images/contact.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: $azul-logo--oscuro;
+	padding: 2rem;
+
+		p.title, .subtitle{
+			text-align: center;
+			color: $azul-logo--oscuro;
+		}
+
+		.container-contact {
+			max-width: 500px;
+			padding: 2rem;
+			background-color: $azul-logo--claro-alpha;
+			border-radius: 5px;
+
+			input {
+				width: 100%;
+				margin-bottom: 1rem;
+				height: 35px;
+				border-radius: 5px;
+				border: solid 1px $azul-logo;
+				padding: .5rem;
+			}
+
+			textarea {
+				width: 100%;
+				height: 100px;
+				margin-bottom: 1rem;
+				border-radius: 5px;
+				padding: .5rem;
+			}
+
+			.button {
+				border: solid 2px $azul-logo--oscuro;
+				background-color: $azul-logo--claro;
+				color: #fff;
+
+				.fa-paper-plane {
+					margin-left: .25rem;
+				}
+			}
+		}
+}
+/* Footer */
+footer {
+	background-color: $azul-logo--oscuro;
+	color: #fff;
+	padding: 0 1rem 0 1rem;
+	text-align: center;
+
+	.column{
+		margin-top: 1rem;
+
+		.subtitle {
+			color: #fff;
+		}
+	} 
+
+	img {
+		max-width: 200px;
+	}
+}
+
+/* footer 
+
+.navbar.is-brand.is-fixed-bottom {
     background-color: $azul-logo;
     color: $azul-logo--claro;
     min-height: 30px;
@@ -122,4 +211,4 @@ footer.navbar.is-brand.is-fixed-bottom {
         line-height: 30px;
         font-size: 2rem;
     }
-}
+}*/

@@ -253,7 +253,10 @@ nav .navbar .sidenav__items {
 .sec-prod .headings li {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 1rem;
+  padding-left: 15px;
+}
+.sec-prod .headings li .fa-caret-right {
+  margin-left: 5px;
 }
 .sec-prod .products {
   background-color: #4387EA;
@@ -265,18 +268,95 @@ nav .navbar .sidenav__items {
 }
 
 /* /.Seccion 2 */
-/* footer */
-footer.navbar.is-brand.is-fixed-bottom {
-  background-color: #1B365E;
-  color: #4387EA;
-  min-height: 30px;
-  height: 30px;
+.sec-clients {
+  background-color: #f1f1f1;
 }
-footer.navbar.is-brand.is-fixed-bottom .fa-angle-up {
-  margin-left: calc(50vw - 1rem);
+.sec-clients .subtitle {
   text-align: center;
-  line-height: 30px;
-  font-size: 2rem;
+  padding-bottom: 0;
 }
+.sec-clients .client {
+  line-height: 200px;
+  padding-top: 0;
+}
+.sec-clients .client img {
+  max-height: 100px;
+  vertical-align: middle;
+}
+
+/* Contact */
+.contact {
+  background-image: url(../images/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #142744;
+  padding: 2rem;
+}
+.contact p.title, .contact .subtitle {
+  text-align: center;
+  color: #142744;
+}
+.contact .container-contact {
+  max-width: 500px;
+  padding: 2rem;
+  background-color: rgba(69, 134, 234, 0.7);
+  border-radius: 5px;
+}
+.contact .container-contact input {
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 35px;
+  border-radius: 5px;
+  border: solid 1px #1B365E;
+  padding: 0.5rem;
+}
+.contact .container-contact textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.contact .container-contact .button {
+  border: solid 2px #142744;
+  background-color: #4387EA;
+  color: #fff;
+}
+.contact .container-contact .button .fa-paper-plane {
+  margin-left: 0.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: #142744;
+  color: #fff;
+  padding: 0 1rem 0 1rem;
+  text-align: center;
+}
+footer .column {
+  margin-top: 1rem;
+}
+footer .column .subtitle {
+  color: #fff;
+}
+footer img {
+  max-width: 200px;
+}
+
+/* footer 
+
+.navbar.is-brand.is-fixed-bottom {
+    background-color: $azul-logo;
+    color: $azul-logo--claro;
+    min-height: 30px;
+    height: 30px;
+
+    .fa-angle-up {
+    	margin-left: calc(50vw - 1rem);
+    	text-align: center;
+        line-height: 30px;
+        font-size: 2rem;
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */
