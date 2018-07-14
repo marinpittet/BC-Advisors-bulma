@@ -176,6 +176,20 @@ nav .navbar .sidenav__items {
   }
 }
 
+.banner {
+  background-image: url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ef06f88dab75b74252e22465ad9c99d&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-height: 800px;
+  padding: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  .banner {
+    height: 700px;
+  }
+}
+
 #quiensomos, #servicios, #clientes, #contacto {
   top: -80px;
 }
@@ -192,7 +206,8 @@ nav .navbar .sidenav__items {
   padding: 0;
 }
 .info .info__text {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-top: solid 4px #4387EA;
 }
 
@@ -203,6 +218,7 @@ nav .navbar .sidenav__items {
   padding: 1.2rem;
   background-color: rgba(69, 134, 234, 0.7);
   height: 100%;
+  width: 80%;
 }
 .info__contents .text--active h1, .info__contents .text--active h3, .info__contents .text--active p {
   color: #fff;
@@ -211,7 +227,7 @@ nav .navbar .sidenav__items {
   padding: 1.2rem;
   background-color: rgba(255, 255, 255, 0.7);
   height: 100%;
-  border-left: solid 4px #4387EA;
+  width: 80%;
 }
 .info__contents .text--inactive h3, .info__contents .text--inactive p {
   color: #4387EA;
@@ -220,24 +236,9 @@ nav .navbar .sidenav__items {
   color: #1B365E;
 }
 .info__contents .info__contents--first {
-  background-image: url(../images/banner--4.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   height: 200px;
 }
 .info__contents .info__contents--second {
-  background-image: url(../images/Felipe-01.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 200px;
-}
-.info__contents .info__contents--third {
-  background-image: url(../images/Christopher-01.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   height: 200px;
 }
 
