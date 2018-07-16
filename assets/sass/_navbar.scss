@@ -120,7 +120,11 @@ nav {
 nav {
 	.topbar {
 		@include mobile-layout {
-             
+			.indicadores {
+             .uf, .utm {
+             	display: none;
+             }
+         }
         }
 
         @include mobile-landscape {

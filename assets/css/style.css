@@ -99,6 +99,11 @@ nav .navbar .sidenav__items {
 }
 
 /* /Barra de navegación con despliegue lateral */
+@media only screen and (max-width: 480px) {
+  nav .topbar .indicadores .uf, nav .topbar .indicadores .utm {
+    display: none;
+  }
+}
 @media only screen and (min-width: 1024px) {
   nav .topbar {
     padding: 0 2rem;
