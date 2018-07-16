@@ -20,13 +20,16 @@ nav .topbar .date {
   color: #142744;
   font-size: 0.7rem;
 }
-nav .topbar .social-networks {
-  font-size: 1rem;
+nav .topbar .indicadores {
+  font-size: 0.7rem;
   line-height: 20px;
   vertical-align: middle;
 }
-nav .topbar .social-networks a {
+nav .topbar .indicadores span {
   margin: 0 0 0 0.5rem;
+  color: #142744;
+}
+nav .topbar .indicadores strong {
   color: #142744;
 }
 nav .navbar {
@@ -176,6 +179,21 @@ nav .navbar .sidenav__items {
   }
 }
 
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(69, 134, 234, 0.7);
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
 .banner {
   background-image: url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ef06f88dab75b74252e22465ad9c99d&auto=format&fit=crop&w=1950&q=80);
   background-size: cover;
@@ -222,6 +240,11 @@ nav .navbar .sidenav__items {
 .info .info__text img {
   border-radius: 5px;
   max-height: 200px;
+}
+.info .info__text #title-current--2 {
+  border-top: solid 0px rgba(50, 50, 50, 0.1);
+  margin-top: 2rem;
+  padding-top: 1rem;
 }
 .info .back {
   text-align: center;
@@ -307,6 +330,10 @@ nav .navbar .sidenav__items {
 }
 .sec-prod .products h1 {
   color: #fff;
+}
+.sec-prod .isotipo {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 /* /.Seccion 2 */

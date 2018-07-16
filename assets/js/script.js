@@ -1,4 +1,30 @@
+// indicadores económicos
+var uf, dolar, euro, utm
 
+    $.ajax({
+        url: 'http://mindicador.cl/api',
+        type: 'GET',
+    }).done (function(data) {
+
+        console.log(data)
+
+        uf = data.uf.valor
+        dolar = data.dolar.valor
+        euro = data.euro.valor
+        utm = data.utm.valor
+
+        $(".uf").append(' $' + uf.toLocaleString())
+        $(".dolar").append(' $' + dolar)
+        $(".euro").append(' $' + euro)
+        $(".utm").append(' $' + utm.toLocaleString())
+
+        $(".result").append(dolar)
+
+
+    }).fail(function() {
+        console.log('Error al consumir la API!');
+    })
+// animacion de desplazamiento    
 $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
@@ -99,6 +125,7 @@ $(function() {
             image2.fadeIn('slow');
         });
         titulo2.fadeOut('slow', function() {
+            titulo2.css('border-top', 'solid 0px rgba(50, 50, 50, 0.1)');
             titulo2.text('');
             titulo2.fadeIn('slow');
         });
@@ -127,6 +154,7 @@ $(function() {
             image2.fadeIn('slow');
         });
         titulo2.fadeOut('slow', function() {
+            titulo2.css('border-top', 'solid 2px rgba(69, 134, 234, 0.1)');
             titulo2.text('Christopher Baillarie');
             titulo2.fadeIn('slow');
         });
@@ -139,6 +167,7 @@ $(function() {
     // seccion nuestros servicios, cambio de texto on click
         var titulopro = $('#prod-title');
         var textopro = $('#prod-text');
+        var iso = $('.isotipo');
 
         $('#prod1 a').click(function() {
         	$('.menu-list .is-active').removeClass('is-active');
@@ -151,6 +180,11 @@ $(function() {
                     textopro.text('Valorizamos empresas utilizando los métodos más actualizados de la industria teniendo así una opinión experta acerca del valor de mercado de su negocio. Servicio muy útil para conocer el valor de su negocio y con ello poder vender participaciones al precio de mercado.');
                     textopro.fadeIn('slow');
                 });
+            iso.fadeOut('slow', function() {
+                iso.html('<i class="fas fa-chart-line fa-10x"></i>');
+                iso.fadeIn('slow');
+            });
+
         });
         $('#prod2 a').click(function() {
         	$('.menu-list .is-active').removeClass('is-active');
@@ -163,6 +197,10 @@ $(function() {
                     textopro.text('Realizamos servicio de valorización de fondos de inversión, específicamente fondos de inversión inmobiliarios, capital privado y fondos de fondos.');
                     textopro.fadeIn('slow');
                 });
+             iso.fadeOut('slow', function() {
+                iso.html('<i class="fas fa-chart-bar fa-10x"></i>');
+                iso.fadeIn('slow');
+            });
         });
         $('#prod3 a').click(function() {
         	$('.menu-list .is-active').removeClass('is-active');
@@ -175,6 +213,10 @@ $(function() {
                     textopro.text('Mejoramos el valor de su negocio prestando asesoría en la evaluación de nuevos proyectos en su empresa. Estudiamos las ventajas y desventajas cualitativas y cuantitativas de los nuevos proyectos, con lo cual entregamos un informe por la conveniencia o no de realizarlo.');
                     textopro.fadeIn('slow');
                 });
+             iso.fadeOut('slow', function() {
+                iso.html('<i class="fas fa-chart-pie fa-10x"></i>');
+                iso.fadeIn('slow');
+            });
         });
         $('#prod4 a').click(function() {
         	$('.menu-list .is-active').removeClass('is-active');
@@ -187,6 +229,10 @@ $(function() {
                     textopro.text('Evaluamos el impacto económico de proyectos públicos y privados. Nuestros asociados han participado en diversos proyectos propuestos por el estado.');
                     textopro.fadeIn('slow');
                 });
+             iso.fadeOut('slow', function() {
+                iso.html('<i class="fas fa-chart-area fa-10x"></i>');
+                iso.fadeIn('slow');
+            });
         });
         $('#prod5 a').click(function() {
         	$('.menu-list .is-active').removeClass('is-active');
@@ -199,6 +245,10 @@ $(function() {
                     textopro.text('Por medio de nuestro equipo profesional, realizamos procesos de due-dilligence y prestamos asesorías en la compra y venta de empresas. Proceso muy similar al de la valorización de las empresas y evaluación de los futuros efectos de la fusión mediante proyección de flujos. Los flujos se sensibilizan utilización herramientas estadísticas en las cuales se les otorga distribuciones estadísticas al comportamiento de las variables más relevantes en la conformación del flujo de caja.');
                     textopro.fadeIn('slow');
                 });
+             iso.fadeOut('slow', function() {
+                iso.html('<i class="far fa-handshake fa-10x"></i>');
+                iso.fadeIn('slow');
+            });
         });
         $('#prod6 a').click(function() {
         	$('.menu-list .is-active').removeClass('is-active');
@@ -211,6 +261,36 @@ $(function() {
                     textopro.text('Prestamos asesorías en relación al mejoramiento de su rating crediticio para presentación frente a los bancos, inversionistas y calificadoras de riesgo. Realizamos un informe completo sobre los aspectos fundamentales de la compañía que se deben fortalecer para que esta tenga mejores condiciones crediticias (tasas de interés más bajas, estructuración a largo plazo de su deuda financiera o mejoramiento de monto de las líneas crédito).');
                     textopro.fadeIn('slow');
                 });
+             iso.fadeOut('slow', function() {
+                iso.html('<i class="far fa-handshake fa-10x"></i>');
+                iso.fadeIn('slow');
+            });
         });
+
+        /* To Top button animated
+----------------------------- */
+// When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            $("#toTop").css("display", "block");
+        } else {
+            $("#toTop").css("display", "none");
+        }
+    }
+
+    $('#toTop').on('click', function(topFunction) {
+        topFunction.preventDefault();
+        $("html, body").animate({scrollTop: 0}, 200);
+    });
+
+    $('#down').on('click', function(topFunction) {
+        topFunction.preventDefault();
+        $("html, body").animate({scrollTop: $(window).height()*1}, 1000);
+    });
+
+/* fin To Top button animated
+----------------------------- */
 
 });

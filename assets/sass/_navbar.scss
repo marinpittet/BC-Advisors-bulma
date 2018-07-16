@@ -22,13 +22,17 @@ nav {
 	    	font-size: .7rem;
 		}
 
-	    .social-networks {
-	    	font-size: 1rem;
+	    .indicadores {
+	    	font-size: .7rem;
         	line-height: 20px;
         	vertical-align: middle;
 
-        	a {
+        	span {
 	        	margin: 0 0 0 .5rem; 
+				color: $azul-logo--oscuro;
+        	}
+
+        	strong {
 				color: $azul-logo--oscuro;
         	}
 	    }
