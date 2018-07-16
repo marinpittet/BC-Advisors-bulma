@@ -48,7 +48,6 @@ $(window).on('load', function() {
 // /Date topbar
 
 $(function() {
-
     // Toggleable Navbar
     $('.navbar__toggle').click(function() {
 

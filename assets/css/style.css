@@ -210,6 +210,16 @@ nav .navbar .sidenav__items {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner .is-4 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner .is-4 {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 480px) {
   .banner {
     height: calc(100vh - 4rem);
@@ -222,7 +232,10 @@ nav .navbar .sidenav__items {
   }
 }
 
-#quiensomos, #servicios, #clientes, #contacto {
+#quiensomos,
+#servicios,
+#clientes,
+#contacto {
   top: -80px;
 }
 
@@ -265,7 +278,9 @@ nav .navbar .sidenav__items {
   width: 100%;
   border-radius: 3px;
 }
-.info__contents .text--active h1, .info__contents .text--active h3, .info__contents .text--active p {
+.info__contents .text--active h1,
+.info__contents .text--active h3,
+.info__contents .text--active p {
   color: #fff;
 }
 .info__contents .text--inactive {
@@ -275,7 +290,8 @@ nav .navbar .sidenav__items {
   width: 100%;
   border-radius: 3px;
 }
-.info__contents .text--inactive h3, .info__contents .text--inactive p {
+.info__contents .text--inactive h3,
+.info__contents .text--inactive p {
   color: #4387EA;
 }
 .info__contents .text--inactive h1 {
@@ -367,7 +383,8 @@ nav .navbar .sidenav__items {
   color: #142744;
   padding: 2rem;
 }
-.contact p.title, .contact .subtitle {
+.contact p.title,
+.contact .subtitle {
   text-align: center;
   color: #fff;
 }
