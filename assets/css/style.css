@@ -183,10 +183,19 @@ nav .navbar .sidenav__items {
   background-position: center center;
   max-height: 800px;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 480px) {
+  .banner {
+    height: calc(100vh - 4rem);
+  }
 }
 @media only screen and (min-width: 1024px) {
   .banner {
-    height: 700px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -210,6 +219,13 @@ nav .navbar .sidenav__items {
   padding-bottom: 2rem;
   border-top: solid 4px #4387EA;
 }
+.info .info__text img {
+  border-radius: 5px;
+  max-height: 200px;
+}
+.info .back {
+  text-align: center;
+}
 
 .info__contents .column {
   padding: 0;
@@ -218,7 +234,8 @@ nav .navbar .sidenav__items {
   padding: 1.2rem;
   background-color: rgba(69, 134, 234, 0.7);
   height: 100%;
-  width: 80%;
+  width: 100%;
+  border-radius: 3px;
 }
 .info__contents .text--active h1, .info__contents .text--active h3, .info__contents .text--active p {
   color: #fff;
@@ -227,7 +244,8 @@ nav .navbar .sidenav__items {
   padding: 1.2rem;
   background-color: rgba(255, 255, 255, 0.7);
   height: 100%;
-  width: 80%;
+  width: 100%;
+  border-radius: 3px;
 }
 .info__contents .text--inactive h3, .info__contents .text--inactive p {
   color: #4387EA;

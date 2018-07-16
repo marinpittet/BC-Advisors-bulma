@@ -8,23 +8,26 @@
 	background-position: center center;
 	max-height: 800px;
 	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	@include mobile-layout {
-             
-        }
+        height: calc(100vh - 4rem);
+    }
 
-        @include mobile-landscape {
+    @include mobile-landscape {
            
-        }
+    }
 
-        @include tablet-layout {
+    @include tablet-layout {
           
-        }
+    }
 
-
-    	@include desktop-layout {
-        	height: 700px;
-        }
+	@include desktop-layout {
+    	padding-top: 4rem;
+    	padding-bottom: 4rem;
+    }
 }
 
 #quiensomos, #servicios, #clientes, #contacto {
@@ -48,11 +51,22 @@
 	.info__text {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
-		border-top: solid 4px $azul-logo--claro;	
+		border-top: solid 4px $azul-logo--claro;
+
+		img {
+			border-radius: 5px;
+			max-height: 200px;
+		}	
 	}
+
+	.back {
+		text-align: center;
+	}
+
 }
 
 .info__contents {
+
 	.column {
 		padding: 0;
 	}
@@ -61,7 +75,8 @@
 		padding: 1.2rem;
 		background-color: $azul-logo--claro-alpha;
 		height: 100%;
-		width: 80%;
+		width: 100%;
+		border-radius: 3px;
 
 		h1, h3, p {
 			color: #fff;
@@ -72,7 +87,8 @@
 		padding: 1.2rem;
 		background-color: rgba(255, 255, 255, 0.7);
 		height: 100%;
-		width: 80%;
+		width: 100%;
+		border-radius: 3px;
 
 		h3, p {
 			color: $azul-logo--claro;
