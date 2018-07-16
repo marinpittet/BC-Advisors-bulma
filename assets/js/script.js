@@ -2,7 +2,7 @@
 var uf, dolar, euro, utm
 
     $.ajax({
-        url: 'http://mindicador.cl/api',
+        url: 'https://cors-anywhere.herokuapp.com/http://mindicador.cl/api',
         type: 'GET',
     }).done (function(data) {
 
