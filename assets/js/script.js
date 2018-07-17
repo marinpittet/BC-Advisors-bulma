@@ -180,7 +180,7 @@ $(function() {
                     textopro.fadeIn('slow');
                 });
             iso.fadeOut('slow', function() {
-                iso.html('<i class="fas fa-chart-line fa-10x"></i>');
+                iso.html(`<i class="fas fa-chart-line fa-10x"></i>`);
                 iso.fadeIn('slow');
             });
 
@@ -189,7 +189,7 @@ $(function() {
         	$('.menu-list .is-active').removeClass('is-active');
         	$(this).addClass('is-active');
         	titulopro.fadeOut('slow', function() {
-                    titulopro.text('Valorizacion de fondos de inversión');
+                    titulopro.text(`Valorizacion de fondos de inversión`);
                     titulopro.fadeIn('slow');
                 });
         	textopro.fadeOut('slow', function() {
