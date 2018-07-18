@@ -1,3 +1,4 @@
+$(function() {
 // indicadores económicos
 var uf, dolar, euro, utm
 
@@ -50,7 +51,6 @@ $(window).on('load', function fecha() {
 });
 // /Date topbar
 
-$(function() {
     // Toggleable Navbar
     $('.navbar__toggle').click(function() {
 
