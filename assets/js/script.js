@@ -35,21 +35,6 @@ $('a[href^="#"]').on('click', function(event) {
         }, 1000);
     }
 });
-// Date topbar
-$(window).on('load', function fecha() {
-    var d = new Date();
-    d = d.toLocaleString();
-
-    var h = new Date().getHours();
-    var m = new Date().getMinutes();
-    var s = new Date().getSeconds();
-   
-    // console.log(h, m, s);
-    $('#date').text(' ' + d);
-
-    setInterval(fecha, 1000);
-});
-// /Date topbar
 
     // Toggleable Navbar
     $('.navbar__toggle').click(function() {
@@ -294,5 +279,19 @@ $(window).on('load', function fecha() {
 
 /* fin To Top button animated
 ----------------------------- */
+// Date topbar
+$(window).on('load', function fecha() {
+    var d = new Date();
+    d = d.toLocaleString();
 
+    var h = new Date().getHours();
+    var m = new Date().getMinutes();
+    var s = new Date().getSeconds();
+   
+    // console.log(h, m, s);
+    $('#date').text(' ' + d);
+
+    setInterval(fecha, 1000);
+});
+// /Date topbar
 });
