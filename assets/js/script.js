@@ -35,6 +35,63 @@ $('a[href^="#"]').on('click', function(event) {
         }, 1000);
     }
 });
+// Date topbar
+$(window).on('load', function () {
+    // var d = new Date();
+    // d = d.toLocaleString();
+
+    var month = new Date().getMonth();
+    var dia = new Date().getDay();
+    var day = new Date().getDate();
+    var year = new Date().getFullYear();
+
+    if (month == 0){
+       month = 'Ene'; 
+    }else if(month == 1){
+       month = 'Feb';
+    }else if(month == 2){
+       month = 'Mar';
+    }else if(month == 3){
+       month = 'Abr';
+    }else if(month == 4){
+       month = 'May';
+    }else if(month == 5){
+       month = 'Jun';
+    }else if(month == 6){
+       month = 'Jul';
+    }else if(month == 7){
+       month = 'Ago';
+    }else if(month == 8){
+       month = 'Sep';
+    }else if(month == 9){
+       month = 'Oct';
+    }else if(month == 10){
+       month = 'Nov';
+    }else if(month == 11){
+       month = 'Dic';
+    };
+
+    if (dia == 0){
+       dia = 'Dom'; 
+    }else if(dia == 1){
+       dia = 'Lun';
+    }else if(dia == 2){
+       dia = 'Mar';
+    }else if(dia == 3){
+       dia = 'Mie';
+    }else if(dia == 4){
+       dia = 'Jue';
+    }else if(dia == 5){
+       dia = 'Vie';
+    }else if(dia == 6){
+       dia = 'Sab';
+    };   
+   
+    // console.log(h, m, s);
+    $('#date').text(' ' + dia + ' ' + day + ' / ' + month + ' / ' + year);
+
+});
+// /Date topbar
 
     // Toggleable Navbar
     $('.navbar__toggle').click(function() {
@@ -279,19 +336,5 @@ $('a[href^="#"]').on('click', function(event) {
 
 /* fin To Top button animated
 ----------------------------- */
-// Date topbar
-$(window).on('load', function fecha() {
-    var d = new Date();
-    d = d.toLocaleString();
 
-    var h = new Date().getHours();
-    var m = new Date().getMinutes();
-    var s = new Date().getSeconds();
-   
-    // console.log(h, m, s);
-    $('#date').text(' ' + d);
-
-    setInterval(fecha, 1000);
-});
-// /Date topbar
 });
