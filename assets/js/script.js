@@ -35,15 +35,18 @@ $('a[href^="#"]').on('click', function(event) {
     }
 });
 // Date topbar
-$(window).on('load', function() {
+$(window).on('load', function fecha() {
     var d = new Date();
-    d = d.toDateString();
+    d = d.toLocaleString();
 
     var h = new Date().getHours();
     var m = new Date().getMinutes();
     var s = new Date().getSeconds();
+   
     // console.log(h, m, s);
     $('#date').text(' ' + d);
+
+    setInterval(fecha, 1000);
 });
 // /Date topbar
 
